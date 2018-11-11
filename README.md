@@ -1,24 +1,28 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+##Requirement
+* elasticsearch
 
-Things you may want to cover:
+##Installation
 
-* Ruby version
+Run first elasticsearch on your terminal:
+  elasticsearch
 
-* System dependencies
+Then go to your app path and type:
+  bundle install
+  rake db:setup
+  rake db:migrate
+  rake chewy:reset
 
-* Configuration
 
-* Database creation
+After that you have to set and import the index:
+  rails c
+  > PostsIndex.create!
+  > PostsIndex.import!
 
-* Database initialization
+Then your good to go:
+  rails s
+  localhost:3000/posts
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
-
-* ...
