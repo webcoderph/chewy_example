@@ -6,6 +6,12 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all
   end
+  
+  def search
+    if params[:key]
+      @posts = Post.search(params[:key])
+    end
+  end
 
   # GET /posts/1
   # GET /posts/1.json

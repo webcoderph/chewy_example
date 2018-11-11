@@ -35,6 +35,7 @@ gem 'elasticsearch'
 gem 'elasticsearch-extensions'
 gem 'active_data', github: 'pyromaniac/active_data'
 gem 'kaminari'
+gem 'simple_form'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
